@@ -7,6 +7,9 @@ import { CapitalComponent } from './pages/capital/capital.component';
 import { CountryComponent } from './pages/country/country.component';
 import { RegionComponent } from './pages/region/region.component';
 import { ViewCountryComponent } from './pages/view-country/view-country.component';
+import { SearchComponent } from './components/search/search.component';
+import { CountriesTableComponent } from './components/countries-table/countries-table.component';
+import { SearchErrorComponent } from './components/search-error/search-error.component';
 
 
 
@@ -15,7 +18,10 @@ import { ViewCountryComponent } from './pages/view-country/view-country.componen
     CapitalComponent,
     CountryComponent,
     RegionComponent,
-    ViewCountryComponent
+    ViewCountryComponent,
+    SearchComponent,
+    CountriesTableComponent,
+    SearchErrorComponent
   ],
   exports: [
     CapitalComponent,

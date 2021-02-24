@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-capital',
@@ -6,11 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class CapitalComponent implements OnInit {
+export class CapitalComponent {
+
+  public endpoint: string = "capital";
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

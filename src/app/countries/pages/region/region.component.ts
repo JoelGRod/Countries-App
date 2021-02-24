@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-region',
@@ -6,11 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class RegionComponent implements OnInit {
+export class RegionComponent {
+
+  public endpoint: string = "region";
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

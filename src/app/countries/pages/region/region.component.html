@@ -1,1 +1,21 @@
-<p>region works!</p>
+<h2> By Region </h2>
+<hr>
+
+<!-- Search input -->
+<div class="row">
+    <div class="col">
+        <app-search [endpoint]="endpoint"></app-search>
+    </div>
+</div>
+
+<hr>
+
+<!-- Error message -->
+<app-search-error></app-search-error>
+
+<!-- Countries results table -->
+<div class="row">
+    <div class="col">
+        <app-countries-table></app-countries-table>
+    </div>
+</div>

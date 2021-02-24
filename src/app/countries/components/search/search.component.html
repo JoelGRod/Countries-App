@@ -1,0 +1,9 @@
+<form (ngSubmit)="search()" autocomplete="no">
+    <input 
+        type="text" 
+        name="term" 
+        [(ngModel)]="term" 
+        (input)="pressedKey()"
+        class="form-control" 
+        placeholder="Search by {{ endpoint | titlecase }}..." >
+</form>

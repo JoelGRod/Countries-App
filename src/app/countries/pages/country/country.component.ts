@@ -8,10 +8,8 @@ import { Component } from '@angular/core';
 })
 export class CountryComponent  {
 
-  term: string = ""
-  
-  search() {
-    console.log(this.term);
-  }
+  public endpoint: string = "name";
 
+  constructor() {}
+  
 }
