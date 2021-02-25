@@ -1,14 +1,17 @@
-<h2> By Region </h2>
+<h2>By Region <small> {{ active_region | titlecase }} </small> </h2>
 <hr>
+<h5>Select Region</h5>
 
-<!-- Search input -->
 <div class="row">
     <div class="col">
-        <app-search [endpoint]="endpoint"></app-search>
-    </div>
+        <button 
+        *ngFor="let region of regions" 
+        [class]="getCssClass(region)" 
+        (click)="activate_region(region)">
+        {{region | titlecase}}
+    </button>
 </div>
-
-<hr>
+</div>
 
 <!-- Error message -->
 <app-search-error></app-search-error>
@@ -19,3 +22,12 @@
         <app-countries-table></app-countries-table>
     </div>
 </div>
+
+<!-- Change css class dinamically -->
+<!-- Option I - Last css classes remains -->
+<!-- [class.btn-primary] = "region === active_region" -->
+<!-- Option II - Angular needs to evaluate two conditions. Efficiency lack -->
+<!-- [ngClass] = "{
+    'btn-primary': region === active_region,
+    'btn-outline-primary': region !== active_region
+}" -->

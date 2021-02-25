@@ -27,7 +27,7 @@ export class ViewCountryComponent implements OnInit {
     this.activatedRoute.params
       .pipe(
         switchMap(({ id }) => this.countries_service.searchSpecificCountry(id)),
-        tap( country => console.log(country) ) // Secondary action
+        // tap( country => console.log(country) ) // Secondary action
       )
       .subscribe( country => {
         this.country = country;

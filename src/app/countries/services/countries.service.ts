@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 // Interfaces
 import { Country } from '../interfaces/country.interface';
@@ -27,10 +27,15 @@ export class CountriesService {
     return this._countries;
   }
 
+  // Shorten reults
+  get http_params() {
+    return new HttpParams().set('fields', 'flag;name;capital;population;alpha2Code');
+  }
+
   constructor(private http: HttpClient) { }
 
   search(term: string, endpoint: string): void {
-    this.http.get<Country[]>(`${this._api_base_url}/${endpoint}/${term}`)
+    this.http.get<Country[]>(`${this._api_base_url}/${endpoint}/${term}`, { params: this.http_params })
     .subscribe( countries => {
         this._error = false;
         this._countries = countries;
