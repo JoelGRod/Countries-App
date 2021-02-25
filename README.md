@@ -4,7 +4,7 @@ This is a simple app for searching countries by region, name or capital. It also
 
 No need to configure any API key for it to work.
 
-Application deployed in: 
+Application deployed in: countries-app-9a7e8.netlify.app
 
 Based on the projects by Fernando Herrera - https://www.udemy.com/course/angular-fernando-herrera/
 
