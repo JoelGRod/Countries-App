@@ -1,5 +1,13 @@
 # CountriesApp
 
+This is a simple app for searching countries by region, name or capital. It also shows certain information about each one, expanding it in a specific section for each country.
+
+No need to configure any API key for it to work.
+
+Application deployed in: 
+
+Based on the projects by Fernando Herrera - https://www.udemy.com/course/angular-fernando-herrera/
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
 
 ## Development server
