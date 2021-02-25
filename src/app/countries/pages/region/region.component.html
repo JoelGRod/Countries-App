@@ -1,9 +1,9 @@
-<h2>By Region <small> {{ active_region | titlecase }} </small> </h2>
+<h2 class="animate__animated animate__fadeInDown">By Region <small> {{ active_region | titlecase }} </small> </h2>
 <hr>
-<h5>Select Region</h5>
 
-<div class="row">
+<div class="row animate__animated animate__fadeIn">
     <div class="col">
+        <h5>Select Region</h5>
         <button 
         *ngFor="let region of regions" 
         [class]="getCssClass(region)" 

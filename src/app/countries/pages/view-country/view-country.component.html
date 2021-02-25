@@ -5,11 +5,11 @@
 <ng-template #divCountry>
     <div class="row">
         <div class="col-12">
-            <h1>Country: <small>{{ country.name }}</small></h1>
+            <h1 class="animate__animated animate__fadeInDown">Country: <small>{{ country.name }}</small></h1>
         </div>
     </div>
 
-    <div class="row">
+    <div class="row animate__animated animate__fadeIn">
         <div class="col-4">
             <h3>Flag</h3>
             <img [src]="country.flag" [alt]="country.name" class="img-thumbnail">
@@ -39,9 +39,9 @@
         </div>
     </div>
 
-    <h3>Translations</h3>
-    <div class="row">
+    <div class="row animate__animated animate__fadeIn">
         <div class="col">
+            <h3>Translations</h3>
             <span class="badge bg-primary mr-1">{{country.translations.br}}</span>
             <span class="badge bg-primary mr-1">{{country.translations.de}}</span>
             <span class="badge bg-primary mr-1">{{country.translations.es}}</span>
