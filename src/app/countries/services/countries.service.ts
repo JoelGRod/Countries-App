@@ -14,6 +14,7 @@ export class CountriesService {
   private _error: boolean = false;
   private _term: string = '';
   private _countries: Country[] = [];
+  private _suggested_countries: Country[] = [];
 
   get error(): boolean {
     return this._error;
@@ -25,6 +26,10 @@ export class CountriesService {
 
   get countries(): Country[] {
     return this._countries;
+  }
+
+  get suggested_countries(): Country[] {
+    return this._suggested_countries;
   }
 
   // Shorten reults
@@ -51,6 +56,12 @@ export class CountriesService {
   }
 
   suggestions(term: string, endpoint: string): void {
-    this._error = false;
+    this.http.get<Country[]>(`${this._api_base_url}/${endpoint}/${term}`, { params: this.http_params })
+    .subscribe( countries => {
+        this._error = false;
+        this._suggested_countries = countries.splice(0, 5);
+      }, error => {
+        this._suggested_countries = [];
+      });
   }
 }

@@ -7,3 +7,13 @@
         class="form-control" 
         placeholder="Search by {{ endpoint | titlecase }}..." >
 </form>
+
+<ul *ngIf="show_suggestions" class="list-group">
+    <li *ngFor="let country of suggested_countries"
+        class="list-group-item list-group-item-action">
+        <a class="nav-link" [routerLink]="['/country', country.alpha2Code]">{{country.name}}</a>
+    </li>
+    <li class="list-group-item list-group-item-action">
+        <a class="nav-link" (click)="search()" > Search {{ term }}</a>
+    </li>
+</ul>
